@@ -11,6 +11,7 @@ import java.util.Collections;
 public class BunParametrizedTest {
   private final String name;
   private final float price;
+  public static final int DELTA_BETWEEN_PRICE = 0;
 
   public BunParametrizedTest(String name, float price) {
     this.name = name;
@@ -52,6 +53,6 @@ public class BunParametrizedTest {
   @Test
   public void getPriceBunParameterizedTest() {
     Bun bun = new Bun(name, price);
-    Assert.assertEquals("Incorrect price of bun. Change it, please",price, bun.getPrice(), 0);
+    Assert.assertEquals("Incorrect price of bun. Change it, please",price, bun.getPrice(), DELTA_BETWEEN_PRICE);
   }
 }
